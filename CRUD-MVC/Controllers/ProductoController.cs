@@ -1,40 +1,79 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CRUD_MVC.Models;
+using CRUD_MVC.Util;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace CRUD_MVC.Controllers
 {
     public class ProductoController : Controller
     {
         // GET: ProductoController
-        public ActionResult Index()
+        public IActionResult Index()
         {
-            return View(Util.Utils.ListaProducto);
+            return View(Utils.ListaProducto);
         }
 
         // GET: ProductoController/Details/5
-        public ActionResult Details(int id)
+        public IActionResult Details(int IdProducto)
         {
-            return View();
+            Producto producto = Utils.ListaProducto.Find(x => x.IdProducto == IdProducto);
+            if (producto != null)
+            {
+                return View(producto);
+            }
+            return RedirectToAction("Index");
         }
 
         // GET: ProductoController/Create
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Create(Producto producto)
+        {
+            int id = Utils.ListaProducto.Count() + 1;
+            producto.IdProducto = id;
+            Utils.ListaProducto.Add(producto);
+            return RedirectToAction("Index");
+        }
 
         // GET: ProductoController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int IdProducto)
         {
-            return View();
+            Producto producto = Utils.ListaProducto.Find(x => x.IdProducto == IdProducto);
+            if (producto != null)
+            {
+                return View(producto);
+            }
+            return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult Edit(Producto nuevo)
+        {
+            Producto antiguo = Utils.ListaProducto.Find(x => x.IdProducto == nuevo.IdProducto);
+            if (antiguo != null)
+            {
+                antiguo.Nombre = nuevo.Nombre;
+                antiguo.Descripcion = nuevo.Descripcion;
+                antiguo.Cantidad = nuevo.Cantidad;
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
 
         // GET: ProductoController/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int IdProducto)
         {
-            return View();
+            Producto producto = Utils.ListaProducto.Find(x => x.IdProducto == IdProducto);
+            if (producto != null)
+            {
+                Utils.ListaProducto.Remove(producto);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

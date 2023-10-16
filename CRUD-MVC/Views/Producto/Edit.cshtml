@@ -1,13 +1,15 @@
-﻿
-@model Producto
+﻿@model Producto
 @{
-    ViewData["Title"] = "Crear Producto";
+    ViewData["Title"] = "Editar Producto";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>En esta página se crean los productos.</p>
+<p>En esta página se editan los productos.</p>
 
 <form method="post">
+    No se xq el tuyo tampoco esta mandando el ID pero poniendo esto le obligas a enviar el ID
+    <input type="hidden" asp-for="IdProducto"/>
+
     <div class="mb-3">
         <label>Nombre</label>
         <input asp-for="Nombre" class="form-control">
@@ -23,11 +25,11 @@
 
     <div class="row col-6">
         <div class="col-6">
-            <button type="submit" class="btn btn-primary">GUARDAR</button>
+            <button type="submit" asp-action="Edit" class="btn btn-primary">GUARDAR</button>
         </div>
         <div class="col-6">
-            <button type="submit" class="btn btn-outline-primary">REGRESAR</button>
+            <a asp-action="Index" class="btn btn-outline-primary">REGRESAR</a>
         </div>
     </div>
-    
+
 </form>
