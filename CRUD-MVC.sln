@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD-MVC", "CRUD-MVC\CRUD-MVC.csproj", "{6F27BE92-97C0-4AAD-880D-C42F7FF587AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIProductos", "APIProductos\APIProductos.csproj", "{049D73C8-05F1-4EE1-98AD-2232DCC24A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIProductos", "APIProductos\APIProductos.csproj", "{049D73C8-05F1-4EE1-98AD-2232DCC24A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

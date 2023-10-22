@@ -29,9 +29,9 @@
                 <td>@item.Nombre</td>
                 <td>@item.Descripcion</td>
                 <td>@item.Cantidad</td>
-                <td><a type="button" asp-action="Details" asp-route-IdProducto="@item.IdProducto" class="btn btn-primary fa-solid fa-eye"> Ver</a>
-                <a asp-action="Edit" asp-route-IdProducto="@item.IdProducto" class="btn btn-success fa-solid fa-pen-to-square"> Editar</a>
-                <a asp-action="Delete" asp-route-IdProducto="@item.IdProducto" class="btn btn-danger fa-solid fa-trash"> Borrar</a></td>
+                <td><a type="button" asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-primary fa-solid fa-eye"></a>
+                <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-success fa-solid fa-pen-to-square"> </a>
+                <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-danger fa-solid fa-trash"> </a></td>
             </tr>
         }
     </tbody>

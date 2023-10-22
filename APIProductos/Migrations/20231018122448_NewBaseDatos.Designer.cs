@@ -3,6 +3,7 @@ using APIProductos.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIProductos.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231018122448_NewBaseDatos")]
+    partial class NewBaseDatos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,22 +52,15 @@ namespace APIProductos.Migrations
                         {
                             IdProducto = 1,
                             Cantidad = 12,
-                            Descripcion = "Album Musical: ALternativo",
-                            Nombre = "Scaled and Icy"
+                            Descripcion = "Descripcion Producto1",
+                            Nombre = "Producto1"
                         },
                         new
                         {
                             IdProducto = 2,
                             Cantidad = 2,
-                            Descripcion = "Album Musical: Pop",
+                            Descripcion = "Album Musical",
                             Nombre = "1989"
-                        },
-                        new
-                        {
-                            IdProducto = 3,
-                            Cantidad = 2,
-                            Descripcion = "Album Musical: Pop",
-                            Nombre = "CALM"
                         });
                 });
 #pragma warning restore 612, 618

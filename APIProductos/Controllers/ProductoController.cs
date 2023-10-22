@@ -51,7 +51,7 @@ namespace APIProductos.Controllers
                 return Ok(producto);
             }
 
-            return BadRequest("Hazlo bien papu, estás mal. El objeto ya existe");
+            return BadRequest("El objeto ya existe");
         }
 
         // PUT api/<ProductoController>/5
@@ -84,7 +84,7 @@ namespace APIProductos.Controllers
                 return NoContent();
             }
 
-            return BadRequest("Hazlo bien papu, estás mal. El objeto no existe");
+            return BadRequest("El objeto no existe");
         }
     }
 }

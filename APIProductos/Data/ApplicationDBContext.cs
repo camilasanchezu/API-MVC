@@ -17,8 +17,8 @@ namespace APIProductos.Data
                 new Producto
                 {
                     IdProducto=1,
-                    Nombre = "Producto1",
-                    Descripcion="Descripcion Producto1",
+                    Nombre = "Scaled and Icy",
+                    Descripcion="Album Musical: ALternativo",
                     Cantidad=12
                 },
 
@@ -26,9 +26,18 @@ namespace APIProductos.Data
                 {
                     IdProducto = 2,
                     Nombre = "1989",
-                    Descripcion = "Album Musical",
+                    Descripcion = "Album Musical: Pop",
+                    Cantidad = 2
+                },
+                new Producto
+                {
+                    IdProducto = 3,
+                    Nombre = "CALM",
+                    Descripcion = "Album Musical: Pop",
                     Cantidad = 2
                 }
+
+
                 );
         }
     }
