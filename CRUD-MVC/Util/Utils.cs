@@ -9,24 +9,24 @@ namespace CRUD_MVC.Util
             new Producto()
             {
                 IdProducto = 1,
-                Nombre = "Harina",
-                Descripcion = "Marca Patito",
+                Nombre = "Scaled and Icy",
+                Descripcion = "Album Musical",
                 Cantidad = 20
             },
 
             new Producto()
             {
                 IdProducto = 2,
-                Nombre = "Cepillo",
-                Descripcion = "Marca Patito",
+                Nombre = "1989",
+                Descripcion = "Album Musical",
                 Cantidad = 15
             },
 
             new Producto()
             {
                 IdProducto = 3,
-                Nombre = "TV",
-                Descripcion = "Marca Sony",
+                Nombre = "CALM",
+                Descripcion = "Album Musical",
                 Cantidad = 2
             }
         };

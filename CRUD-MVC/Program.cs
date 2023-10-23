@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IAPIServices, APIServices>();
+builder.Services.AddScoped<IAPIServices, APIServices>(); // inyección de dependencias
 
 var app = builder.Build();
 

@@ -34,7 +34,7 @@ namespace APIProductos.Controllers
             Producto producto = await _db.Producto.FirstOrDefaultAsync(x => x.IdProducto==IdProducto);
             if (producto == null)
             {
-                return BadRequest(); //Retornar un Error 102 -> El Request está mal hecho
+                return BadRequest(); //Retornar un Error 102 
             }
             return Ok(producto);
         }
