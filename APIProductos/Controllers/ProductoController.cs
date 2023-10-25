@@ -69,7 +69,7 @@ namespace APIProductos.Controllers
                 return Ok(producto2);
             }
 
-            return BadRequest("El producto no existe papu :'v");
+            return BadRequest("El producto no existe");
         }
 
         // DELETE api/<ProductoController>/5
